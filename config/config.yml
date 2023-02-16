@@ -1,0 +1,22 @@
+gin:
+  host: 0.0.0.0
+  port: 8080
+
+jwt:
+  signing_key: douyin-fighting
+
+mysql:
+  host: localhost
+  port: 3306
+  username: root
+  password: 852456jkl
+  db_name: douyin
+  max_open_conns: 100
+  max_idle_conns: 10
+
+redis:
+  host: 43.140.198.154
+  port: 6379
+  password: 123456
+  db: 1
+  pool_size: 100
