@@ -2,9 +2,10 @@ package util
 
 import (
 	"errors"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
+
 	"time"
 )
 

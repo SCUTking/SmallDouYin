@@ -3,9 +3,10 @@ package service
 import (
 	"errors"
 	"fmt"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
 	"github.com/go-redis/redis/v8"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
+
 	"math/rand"
 	"strconv"
 	"time"

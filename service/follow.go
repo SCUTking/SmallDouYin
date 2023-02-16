@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
 )
 
 // GetFollowStatusForUpdate 获取关注状态，此处是针对 AddFollow 和 CancelFollow
@@ -200,17 +200,16 @@ func GetFollowStatusList(followerID uint64, celebrityIDList []uint64) ([]bool, e
 // GetFriendListByUserId 返回已关注列表
 func GetFriendListByUserId(friendId uint64) ([]model.FriendUser, error) {
 	// 通过用户 ID 查询关注 ID 列表
-	celebrityIDList, err := GetFollowIDListByUserID(friendId)
-	if err != nil {
-		return nil, err
-	}
-	// 后续处理，返回用户关注列表
-	celebrityList, err := GetUserListByUserIDList(celebrityIDList)
-	if err != nil {
-		return nil, err
-	}
-	// 再对关注列表进行处理   添加消息的信息
-
+	//celebrityIDList, err := GetFollowIDListByUserID(friendId)
+	//if err != nil {
+	//	return nil, err
+	//}
+	//// 后续处理，返回用户关注列表
+	//celebrityList, err := GetUserListByUserIDList(celebrityIDList)
+	//if err != nil {
+	//	return nil, err
+	//}
+	//// 再对关注列表进行处理   添加消息的信息
+	//
 	return nil, nil
 }
-

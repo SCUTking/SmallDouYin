@@ -6,10 +6,10 @@ import (
 	"strconv"
 	"unicode/utf8"
 
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/service"
+	"github.com/SCUTKing/util"
 	"github.com/gin-gonic/gin"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/service"
-	"github.com/goldenBill/douyin-fighting/util"
 )
 
 // UserLoginResponse 用户登录响应结构体

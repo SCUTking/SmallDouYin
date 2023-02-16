@@ -2,8 +2,11 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/goldenBill/douyin-fighting/service"
-	"github.com/goldenBill/douyin-fighting/util"
+
+	"github.com/SCUTKing/service"
+
+	"github.com/SCUTKing/util"
+
 	"net/http"
 	"strconv"
 )

@@ -2,9 +2,10 @@ package initialize
 
 import (
 	"fmt"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

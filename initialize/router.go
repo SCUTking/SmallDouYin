@@ -2,11 +2,11 @@ package initialize
 
 import (
 	"fmt"
+	"github.com/SCUTKing/controller"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/middleware"
 
 	"github.com/gin-gonic/gin"
-	"github.com/goldenBill/douyin-fighting/controller"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/middleware"
 )
 
 func Router() {

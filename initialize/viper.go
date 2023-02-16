@@ -1,8 +1,8 @@
 package initialize
 
 import (
+	"github.com/SCUTKing/global"
 	"github.com/fsnotify/fsnotify"
-	"github.com/goldenBill/douyin-fighting/global"
 	"github.com/spf13/viper"
 	"log"
 )

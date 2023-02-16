@@ -3,12 +3,12 @@ package service
 import (
 	"errors"
 	"fmt"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
 	"strconv"
 	"time"
 
 	"github.com/go-redis/redis/v8"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
 )
 
 // GetFeedVideosAndAuthorsRedis 获取推送视频以及其作者并返回视频数

@@ -1,11 +1,11 @@
 package initialize
 
 import (
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/util"
 	"math/rand"
 	"time"
 
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/util"
 	"github.com/sony/sonyflake"
 )
 

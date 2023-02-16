@@ -3,8 +3,9 @@ package service
 import (
 	"errors"
 	"fmt"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
+
 	"gorm.io/gorm"
 	"strconv"
 	"time"

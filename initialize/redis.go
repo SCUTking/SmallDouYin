@@ -2,9 +2,9 @@ package initialize
 
 import (
 	"fmt"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/service"
 	"github.com/go-redis/redis/v8"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/service"
 )
 
 func Redis() {

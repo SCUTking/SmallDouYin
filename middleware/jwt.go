@@ -1,9 +1,10 @@
 package middleware
 
 import (
+	"github.com/SCUTKing/controller"
+	"github.com/SCUTKing/util"
 	"github.com/gin-gonic/gin"
-	"github.com/goldenBill/douyin-fighting/controller"
-	"github.com/goldenBill/douyin-fighting/util"
+
 	"net/http"
 )
 

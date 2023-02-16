@@ -2,8 +2,8 @@ package service
 
 import (
 	"errors"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
 )
 
 // GetFavoriteStatusForUpdate 获取点赞状态，此处是针对 AddFavorite 和 CancelFavorite

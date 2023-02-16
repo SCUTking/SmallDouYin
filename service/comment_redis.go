@@ -2,9 +2,10 @@ package service
 
 import (
 	"fmt"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
 	"github.com/go-redis/redis/v8"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
+
 	"math"
 	"math/rand"
 	"strconv"

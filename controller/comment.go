@@ -1,14 +1,14 @@
 package controller
 
 import (
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
+	"github.com/SCUTKing/service"
+	"github.com/SCUTKing/util"
 	"net/http"
 	"unicode/utf8"
 
 	"github.com/gin-gonic/gin"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
-	"github.com/goldenBill/douyin-fighting/service"
-	"github.com/goldenBill/douyin-fighting/util"
 )
 
 // CommentActionRequest 璇勮鎿嶄綔鐨勮姹�

@@ -2,9 +2,9 @@ package service
 
 import (
 	"errors"
-	"github.com/goldenBill/douyin-fighting/global"
-	"github.com/goldenBill/douyin-fighting/model"
-	"github.com/goldenBill/douyin-fighting/util"
+	"github.com/SCUTKing/global"
+	"github.com/SCUTKing/model"
+	"github.com/SCUTKing/util"
 )
 
 // Register 用户注册

@@ -3,9 +3,10 @@ package middleware
 import (
 	"bytes"
 	"encoding/hex"
+	"github.com/SCUTKing/controller"
+	"github.com/SCUTKing/global"
 	"github.com/gin-gonic/gin"
-	"github.com/goldenBill/douyin-fighting/controller"
-	"github.com/goldenBill/douyin-fighting/global"
+
 	"net/http"
 	"path"
 	"strconv"
