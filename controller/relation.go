@@ -18,7 +18,7 @@ type UserListResponse struct {
 }
 type FriendListResponse struct {
 	Response
-	FriendList []FriendUser `json:"friend_list"`
+	FriendList []FriendUser `json:"user_list"`
 }
 
 // RelationAction 评论操作
@@ -183,17 +183,15 @@ func FriendList(c *gin.Context) {
 			// 登录时，获取是否关注，否则总是为false
 			isFollow, _ = service.GetFollowStatus(viewerID, friend.UserID)
 		}
-		var user = User{
+		var addFriend = FriendUser{
 			ID:            friend.UserID,
 			Name:          friend.Name,
 			FollowCount:   friend.FollowCount,
 			FollowerCount: friend.FollowerCount,
 			IsFollow:      isFollow,
-		}
-		var addFriend = FriendUser{
-			User:    user,
-			Message: friend.Message,
-			MsgType: friend.MsgType,
+			Message:       friend.Message,
+			Avatar:        "https://profile.csdnimg.cn/C/5/5/3_a_piece_of_ppx",
+			MsgType:       friend.MsgType,
 		}
 		ResultList = append(ResultList, addFriend)
 	}

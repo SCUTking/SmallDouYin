@@ -30,6 +30,8 @@ func Router() {
 	apiRouter.GET("/relation/follow/list/", controller.FollowList)
 	apiRouter.GET("/relation/follower/list/", controller.FollowerList)
 	apiRouter.GET("/relation/friend/list/", controller.FriendList)
+	apiRouter.POST("/message/action/", controller.MessageAction)
+	apiRouter.GET("/message/chat/", controller.MessageList)
 
 	// 用户权限校验
 	authed := apiRouter.Group("/")
@@ -44,6 +46,7 @@ func Router() {
 
 		// extra apis - II
 		authed.POST("/relation/action/", controller.RelationAction)
+
 	}
 
 	// 用户权限校验 + 文件格式大小检车

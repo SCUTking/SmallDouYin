@@ -199,17 +199,48 @@ func GetFollowStatusList(followerID uint64, celebrityIDList []uint64) ([]bool, e
 
 // GetFriendListByUserId 返回已关注列表
 func GetFriendListByUserId(friendId uint64) ([]model.FriendUser, error) {
-	// 通过用户 ID 查询关注 ID 列表
-	//celebrityIDList, err := GetFollowIDListByUserID(friendId)
-	//if err != nil {
-	//	return nil, err
-	//}
-	//// 后续处理，返回用户关注列表
-	//celebrityList, err := GetUserListByUserIDList(celebrityIDList)
-	//if err != nil {
-	//	return nil, err
-	//}
-	//// 再对关注列表进行处理   添加消息的信息
-	//
-	return nil, nil
+	//通过用户 ID 查询关注 ID 列表
+	celebrityIDList, err := GetFollowIDListByUserID(friendId)
+	if err != nil {
+		return nil, err
+	}
+	// 后续处理，返回用户关注列表
+	celebrityList, err := GetUserListByUserIDList(celebrityIDList)
+	if err != nil {
+		return nil, err
+	}
+	// 再对关注列表进行处理   添加消息的信息
+	ResultList, err := AddMessageToUserList(celebrityList, friendId)
+	if err != nil {
+		return nil, err
+	}
+	return ResultList, nil
+}
+
+func AddMessageToUserList(UserList []model.User, viewId uint64) ([]model.FriendUser, error) {
+
+	var friendList []model.FriendUser
+	friendList = make([]model.FriendUser, 0, len(UserList))
+
+	//封装成FriendUser列表返回
+	for _, User := range UserList {
+		var friend model.FriendUser
+		//通过数据库查询消息信息
+		messageList, err := GetMessageList(viewId, User.UserID)
+		if err != nil {
+
+		}
+		if len(messageList) > 0 {
+			//只有查到了才  加入
+			friend.Message = messageList[0].Content //只有一条消息
+		}
+		friend.MsgType = 0
+
+		friend.UserID = User.UserID
+		friend.FollowerCount = User.FollowCount
+		friend.FollowCount = User.FollowCount
+		friendList = append(friendList, friend)
+	}
+
+	return friendList, nil
 }

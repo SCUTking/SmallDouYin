@@ -39,7 +39,21 @@ type Comment struct {
 
 // FriendUser 朋友信息响应结构体
 type FriendUser struct {
-	User    User   `json:"user"`
-	Message string `json:"message"`
-	MsgType uint64 `json:"msgType"`
+	ID             uint64 `json:"id"`
+	Name           string `json:"name"`
+	FollowCount    int64  `json:"follow_count,omitempty"`
+	FollowerCount  int64  `json:"follower_count,omitempty"`
+	TotalFavorited int64  `json:"total_favorited,omitempty"`
+	FavoriteCount  int64  `json:"favorite_count,omitempty"`
+	IsFollow       bool   `json:"is_follow"`
+	Avatar         string `json:"avatar"`
+	Message        string `json:"message"`
+	MsgType        uint64 `json:"msgType"`
+}
+
+// Message 消息响应结构体
+type Message struct {
+	ID         uint64 `json:"id,omitempty"`
+	Content    string `json:"content,omitempty"`
+	CreateDate int64  `json:"create_date,omitempty"`
 }
